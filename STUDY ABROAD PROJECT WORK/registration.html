@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('destinations.jpg'); 
+            background-size: 100% 100%; 
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .full-height {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card {
+            background: linear-gradient(to bottom right, #FFFFFF, #3498db);
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+        }
+        .card-body {
+            padding: 2.5rem;
+        }
+        .form-control {
+            border-radius: 10px;
+            border: 1px solid #ced4da;
+        }
+        .form-control:focus {
+            border-color: #4d94ff;
+            box-shadow: none;
+        }
+        .btn {
+            font-size: 18px;
+            color: #fff;
+            background: linear-gradient(90deg, #FF6B6B 0%, #FFB88C 100%);
+            padding: 12px 30px;
+            border: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        header {
+            background-color: #3891e3;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        h1, h2, h3 {
+            margin-bottom: 10px;
+        }
+        
+        p {
+            margin-bottom: 20px;
+        }
+        
+        select, input[type="submit"] {
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff; /* Default background color */
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #87ceeb; /* Sky blue when hovering */
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+
+        .flag {
+            width: 20px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        /* Navigation bar styles */
+        nav {
+            background-color: #3891e3;
+            padding: 5px 0; /* Adjusted padding */
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 30px;
+        }
+
+        nav a:hover {
+            background-color: #eb94c0;
+        }
+
+/* Add margin-bottom to create a gap between form elements */
+.mb-3 {
+            margin-bottom: 15px;
+        }
+
+        /* Add margin-top to create space above the link */
+        .mt-3 {
+            margin-top: 15px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Register Please!</h1>
+    </header>
+
+    <!-- Navigation bar -->
+    <nav>
+        <a href="homepage.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="registration.html">Signup</a>
+    </nav>
+    <section class="full-height">
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="fs-4 card-title fw-bold mb-4 text-center">Sign Up</h1>
+                    <form method="POST" class="needs-validation" novalidate autocomplete="off" action="register_process.php">
+                        <div class="mb-3">
+                            <label class="mb-2 text-muted" for="name">Name</label>
+                            <input id="name" type="text" class="form-control" name="name" value="" required autofocus>
+                            <!--<div class="invalid-feedback">
+                                Name is required
+                            </div>-->
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="mb-2 text-muted" for="email">E-Mail Address</label>
+                            <input id="email" type="email" class="form-control" name="email" value="" required>
+                            <!--<div class="invalid-feedback">
+                                Email is invalid
+                            </div>-->
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="mb-2 text-muted" for="password">Password</label>
+                            <input id="password" type="password" class="form-control" name="password" required>
+                            <!--<div class="invalid-feedback">
+                                Password is required
+                            </div>-->
+                        </div>
+
+                        <div class="mb-3">
+                            <select name="option" id="option" class="form-control" required>
+                                <option selected disabled>Register As</option>
+                                <option value="user">Student</option>
+				<option value="employer">Admin</option>
+                                
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select an option
+                            </div>
+                        </div>
+
+                        <p class="form-text text-muted mb-3">
+                            By registering you agree with our terms and condition.
+                        </p>
+
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary" name="register_button">
+                                Sign Up
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer py-3 border-0">
+                    <div class="text-center">
+                        Already have an account? <a href="login.html" class="text-dark">Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

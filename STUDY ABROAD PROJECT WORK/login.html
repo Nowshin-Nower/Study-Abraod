@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+   
+    <!-- Custom Styles -->
+    <style>
+        body {
+            background-image: url('approved.png'); 
+            background-size: cover; 
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .container {
+            height: 100vh; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px; /* Adjusted margin-top */
+        }
+        .card {
+            background: linear-gradient(to bottom right, #7f7eed, #b4bee3);
+            border: none; 
+            border-radius: 20px; 
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+            width: 400px; /* Set width for the card */
+        }
+        .card-body {
+            padding: 2.5rem; 
+            height: 350px; /* Set height for the card body */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .form-control {
+            border: 1px solid #cedad7; 
+            border-radius: 10px; 
+            font-size: 1.1rem; 
+        }
+
+        .btn {
+            font-family: Roboto, sans-serif;
+            font-weight: 0;
+            font-size: 14px;
+            color: #fff;
+            background: linear-gradient(90deg, #0066CC 0%, #c500cc 100%);
+            padding: 10px 30px;
+            border: 2px solid #0066cc;
+            border-radius: 50px;
+            transition : all 0.3s ease;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            padding: 10px 50px;
+            background: linear-gradient(90deg, #0066CC 0%, #c500cc 100%);
+            color: #0066cc;
+            border: solid 2px #0066cc;
+        }
+
+        /* Add margin-bottom to create a gap between form elements */
+        .mb-3 {
+            margin-bottom: 15px;
+        }
+
+        /* Add margin-top to create space above the link */
+        .mt-3 {
+            margin-top: 15px;
+        }
+
+ header {
+            background-color: #3891e3;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        h1, h2, h3 {
+            margin-bottom: 10px;
+        }
+        
+        p {
+            margin-bottom: 20px;
+        }
+        
+        select, input[type="submit"] {
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff; /* Default background color */
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #87ceeb; /* Sky blue when hovering */
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+
+        .flag {
+            width: 20px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        /* Navigation bar styles */
+        nav {
+            background-color: #3891e3;
+            padding: 5px 0; /* Adjusted padding */
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 30px;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        /* Contact section styles */
+        #contact {
+            width: 120%;
+            height: 100vh;
+            padding-top: 70px;
+        }
+
+        #contact .container {
+            width: 100%;
+            height: 80vh;
+            background: linear-gradient(90deg, white, 80%, #b2744c 20%);
+            border-radius: 10px;
+        }
+
+        .heading6 {
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 70px;
+        }
+
+        .heading6 span {
+            color: #b2744c;
+        }
+
+        #contact p {
+            font-weight: bold;
+            font-size: 13px;
+            color: black;
+        }
+
+        #contact input {
+            width: 360px;
+            border: none;
+            border-bottom: 1px solid #b2744c;
+        }
+
+        .contact-btn {
+            width: 200px;
+            height: 36px;
+            border: none;
+            background: #b2744c;
+            color: white;
+            font-weight: bold;
+            margin-top: 30px;
+            cursor: pointer;
+        }
+
+        #col {
+            width: 40%;
+            height: 56vh;
+            background: black;
+            margin-top: 78px;
+        }
+
+        #contact h1 {
+            color: white;
+            font-size: 25px;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+        #contact #col p {
+            font-size: 15px;
+            color: white;
+            margin-left: 13px;
+            margin-top: 30px;
+        }
+
+        @media screen and (max-width:760px) {
+            #contact .container {
+                background: white;
+            }
+            #col {
+                width: 100%;
+                background: #b2744c;
+            }
+            #contact {
+                height: 150lvh;
+            }
+        }
+
+        @media screen and (max-width:400px) {
+            #contact input {
+                width: 250px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<header>
+        <h1>Login Please!</h1>
+    </header>
+
+    <!-- Navigation bar -->
+    <nav>
+        <a href="homepage.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="registration.html">Signup</a>
+    </nav>
+
+<section>
+    <div class="container">
+        <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9">
+            <div class="text-center my-5">
+                <img src="" alt="" width="250" >
+            </div>
+            <div class="card shadow-lg">
+                <div class="card-body p-5">
+                    <h1 class="fs-4 card-title fw-bold mb-4 text-white">Login</h1>
+                    <form method="POST" autocomplete="off" action="loginprocess.php">
+                        <div class="mb-3">
+                            <label class="mb-2 text-white" for="email">E-Mail Address</label>
+                            <input id="email" type="text" class="form-control" name="username" required autofocus>
+                        </div>
+                        <div class="mb-3 d-flex justify-content-between align-items-center">
+                            <label class="mb-2 text-white" for="password">Password</label>
+                        </div>
+                        <div class="mb-3">
+                            <input id="password" type="password" class="form-control" name="password" required>
+                        </div>
+                        <div class="mb-3">
+                            <select name="option" id="option" class="form-control" required>
+                              <option selected disabled>Login As</option>
+                              <option value="admin">Admin</option>
+                              <option value="student">Student</option>
+                            </select>
+                            <a href="forgot.html" class="text-white mb-3">Forgot Password?</a>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" class="btn btn-primary" name="loginbutton">
+                                Login
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer py-3 border-0">
+                    <div class="text-center mt-3"> <!-- Add margin-top to center the link -->
+                        Don't have an account? <a href="registration.html" class="text-dark">Create One</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
