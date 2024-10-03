@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Abroad - University Search</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+            color: #333;
+            padding: 20px;
+            margin: 0;
+        }
+       
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        h1, h2, h3 {
+            margin-bottom: 10px;
+        }
+        
+        p {
+            margin-bottom: 20px;
+        }
+        
+        select, input[type="submit"] {
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff; /* Default background color */
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #87ceeb; /* Sky blue when hovering */
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+
+        .flag {
+            width: 20px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        /* Navigation bar styles */
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        /* Contact section styles */
+        #contact {
+            width: 100%;
+            height: 100vh;
+            padding-top: 70px;
+        }
+
+        #contact .container {
+            width: 100%;
+            height: 80vh;
+            background: linear-gradient(90deg, white, 80%, #b2744c 20%);
+            border-radius: 10px;
+        }
+
+        .heading6 {
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 70px;
+        }
+
+        .heading6 span {
+            color: #b2744c;
+        }
+
+        #contact p {
+            font-weight: bold;
+            font-size: 13px;
+            color: black;
+        }
+
+        #contact input {
+            width: 360px;
+            border: none;
+            border-bottom: 1px solid #b2744c;
+        }
+
+        .contact-btn {
+            width: 200px;
+            height: 36px;
+            border: none;
+            background: #b2744c;
+            color: white;
+            font-weight: bold;
+            margin-top: 30px;
+            cursor: pointer;
+        }
+
+        #col {
+            width: 40%;
+            height: 56vh;
+            background: black;
+            margin-top: 78px;
+        }
+
+        #contact h1 {
+            color: white;
+            font-size: 25px;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+        #contact #col p {
+            font-size: 15px;
+            color: white;
+            margin-left: 13px;
+            margin-top: 30px;
+        }
+
+        @media screen and (max-width:760px) {
+            #contact .container {
+                background: white;
+            }
+            #col {
+                width: 100%;
+                background: #b2744c;
+            }
+            #contact {
+                height: 150lvh;
+            }
+        }
+
+        @media screen and (max-width:400px) {
+            #contact input {
+                width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Study Abroad - University Search</h1>
+    </header>
+
+    <!-- Navigation bar -->
+    <nav>
+        <a href="homepage.html">Home</a>
+        <a href="#contact">Contact</a>
+        <a href="login.html">Login</a>
+        <a href="registration.html">Signup</a>
+    </nav>
+
+    <div class="container">
+        <form action="university.php" method="get">
+            <label for="country">Select a Country:</label>
+            <select id="country" name="country">
+                <option value="" selected disabled>-- Select Country --</option>
+                <option value="australia">Australia</option>
+                <option value="bangladesh">Bangladesh</option>
+                <option value="india">India</option>
+                <option value="canada">Canada</option>
+                <option value="germany">Germany</option>
+                <option value="usa">USA</option>
+                <option value="uk">UK</option>
+                
+            </select>
+            <input type="submit" value="Search">
+        </form>
+
+        <h2>Country List:</h2>
+        <ul>
+            <li><img class="flag" src="flags/aus-flag.png" alt="Australia Flag"> <a href="australia.html">Australia</a></li>
+            <li><img class="flag" src="flags/bd-flag.png" alt="Bangladesh Flag"> <a href="#">Bangladesh</a></li>
+            <li><img class="flag" src="flags/india-flag.png" alt="India Flag"> <a href="#">India</a></li>
+            <li><img class="flag" src="flags/canada-flag.png" alt="Canada Flag"> <a href="#">Canada</a></li>
+            <li><img class="flag" src="flags/germany-flag.png" alt="Germany Flag"> <a href="#">Germany</a></li>
+            <li><img class="flag" src="flags/usa-flag.png" alt="USA Flag"> <a href="#">USA</a></li>
+            <li><img class="flag" src="flags/uk-flag.png" alt="UK Flag"> <a href="#">UK</a></li>
+            <li><img class="flag" src="flags/china-flag.png" alt="China Flag"> <a href="#">China</a></li>
+            <li><img class="flag" src="flags/japan-flag.png" alt="Japan Flag"> <a href="#">Japan</a></li>
+            <li><img class="flag" src="flags/south-korea-flag.png" alt="South Korea Flag"> <a href="#">South Korea</a></li>
+        </ul>
+        
+        
+        
+    </div>
+
+    <!-- Contact section -->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="heading6">Contact <span>Us</span></div>
+                    <p>Interested in using our space for your gatherings or events? <br>Reach out to us for event bookings and custom coffee catering options.</p>
+                    <input type="text" class="form-control" placeholder="Name" aria-label="default input example"><br>
+                    <input type="email" class="form-control" placeholder="Email" aria-label="default input example"><br>
+                    <input type="number" class="form-control" placeholder="Phone" aria-label="default input example"><br>
+                    <button class="contact-btn">Send message</button>
+                </div>
+                <div class="col-md-5" id="col">
+                    <h1>Info</h1>
+                    <p><i class="fa-regular fa-envelope"> Example@gmail.com</i></p>
+                    <p><i class="fa-solid fa-phone"> +008234567</i></p>
+                    <p><i class="fa-solid fa-building-columns">Roshni Ema Nowshin</i></p>
+                    
+            </div>
+        </div>
+    </section>
+    <!-- End of Contact section -->
+
+    <footer>
+        <p>&copy; 2024 Study Abroad. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+}
+.all-content{
+    background: #f7f5f2;
+}
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background: #b2744c;
+    border-radius: 10px;
+}
+html::-webkit-scrollbar{
+    width: 10px;
+
+}
+
+#navbar{
+    background-color: #b2744c;
+}
+#logo img{
+    border-radius: 10px;
+    width: 160px;
+    margin-left: 40px;
+}
+.navbar-nav{
+    margin-left: 50px;
+}
+.nav-item .nav-link{
+    color: black;
+    margin-left: 10px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.nav-item .nav-link:hover{
+    background: #f7f5f2;
+    border-radius: 5px;
+    color: rgba(110, 12, 12, 0.708);
+}
+#navbar form button{
+    background: black;
+    color: white;
+    border: 1px solid white;
+}
+
+#home{
+    width: 100%;
+    height: 90vh;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('op3.avif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 80%;
+
+}
+
+#home .content{
+    padding-top: 210px;
+    margin-left: 56px;
+}
+#home .content h3{
+    font-size: 50px;
+    color: white;
+}
+#home .content p{
+    margin-top: 10px;
+    color: white;
+}
+
+#btn{
+    width: 150px;
+    height: 36px;
+    margin-top: 20px;
+    background: white;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+#btn:hover{
+    background: #b2744c;
+    color: white;
+}
+
+#about{
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 60px;
+}
+
+#about .container{
+    padding-top: 70px;
+}
+
+.heading{
+    text-align: center;
+    margin-bottom: 50px;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.heading span{
+    color: #b2744c;
+}
+#about .card{
+    border-radius: 10px;
+}
+#about .card img{
+    border-radius: 10px;
+}
+
+#about-btn{
+    width: 200px;
+    height: 36px;
+    background: transparent;
+    border: 2px solid #b2744c;
+    color: #b2744c;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#about-btn:hover{
+    background-color: #b2744c;
+    color: white;   
+}
+
+@media screen and(max-wiidth:982px) {
+    #about p{
+        font-size: 8px;
+    }
+}
+@media screen and(max-wiidth:766) {
+    #about p{
+        font-size: 15px;
+    }
+    #about{
+        height: 120vh;
+    }
+}
+
+
+.heading2{
+    color: black;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.heading2 span{
+    color: #b2744c;
+}
+
+.heading3{
+    text-align: center;
+    font-size: 30px;
+    color: #b2744c;
+    font-weight: bold;
+    border-bottom: 2px solid #b2744c;
+}
+
+.testimonial_wrapper{
+    padding: 100px 0;
+}
+
+.testimonial_wrapper .testimonials_subtitle{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 5px;
+    color: var(var--text-light-3);
+}
+
+.testimonial_wrapper .testimonials_title{
+    font-family: var(--secondary-font);
+    font-weight: 800;
+    font-size: 34px;
+    line-height: 1.25;
+    margin-bottom: 80px;
+    color: var(--text-black);
+}
+
+.testimonial_wrapper .testimonials_card{
+    border-radius: 15px;
+    padding: 50px;
+    background-color: var(--bg-white);
+    box-shadow: 0 5px 40px rgba(0 0 0 /15%);   
+}
+
+.testimonial_wrapper .testimonials_card h3{
+    font-family: var(--secondary-font);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 5px;
+    color: var(--text-black);
+}
+
+.testimonial_wrapper .testimonials_role{
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 25px;
+    color: rgb(37, 145, 154);
+}
+
+.testimonial_wrapper .estimonials_text{
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.5;   
+}
+
+#container2{
+    margin-top: 50px;
+}
+
+.heading4{
+    text-align: center;
+    color: #b2744c;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 100px;
+    border-bottom: 2px solid  #b2744c;
+}
+
+#container3{
+    margin-top: 30px;
+}
+
+
+#gallary{
+    width: 100%;
+}
+.heading5{
+    text-align: center;
+    color: black;
+    margin-top: 60px;
+    font-size: 30px;
+    font-weight: bold;
+}
+#gallary .heading5 span{
+    color: #b2744c;
+}
+
+#gallary .card{
+    border-radius: 10px;
+    cursor: pointer;
+}
+#gallary .card img{
+    border-radius: 10px;
+} 
+
+
+#contact{
+    width: 100%;
+    height: 100vh;
+    padding-top: 70px;
+}
+
+#contact .container{
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(90deg, white, 80%, #b2744c 20% );
+    border-radius: 10px;
+}
+
+.heading6{
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 70px;
+}
+
+.heading6 span{
+    color: #b2744c;
+}
+
+#contact p{
+    font-weight: bold;
+    font-size: 13px;
+    color: black;
+}
+
+#contact input{
+    width: 360px;
+    border: none;
+    border-bottom: 1px solid #b2744c;
+}
+
+#contact-btn{
+    width: 200px;
+    height: 36px;
+    border: none;
+    background: #b2744c;
+    color: white;
+    font-weight: bold;
+    margin-top: 30px;
+    cursor: pointer;
+}
+#col{
+    width: 40%;
+    height: 56vh;
+    background: black;
+    margin-top: 78px;
+}
+
+#contact h1{
+    color: white;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+#contact #col p{
+    font-size: 15px;
+    color: white;
+    margin-left: 13px;
+    margin-top: 30px;
+}
+
+@media screen and (max-width:760px){
+    #contact .container{
+        background: white;
+    }
+    #col{
+        width: 100%;
+        background: #b2744c;
+    }
+    #contact{
+        height: 150lvh;
+    }
+}
+
+@media screen and (max-width:400px){
+    #contact .input{
+       width: 250px;
+    }
+    
+}
+
+#blog{
+    width: 100%;
+}
+
+#blog .heading7{
+    text-align: center;
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+}
+
+#blog .heading7 span{
+    color: #b2744c;
+}
+
+#blog h5{
+    color: #b2744c;
+}
+
+#blog-btn{
+    width: 200px;
+    height: 36px;
+    border: none;
+    color: white;
+    background: #b2744c;
+    cursor: pointer;
+}
+
+#footer{
+    width: 100%;
+    background: #b2744c;
+    margin-top: 50px;
+}
+
+.footer-logo img{
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+#footer .social-links i{
+    font-size: 17px;
+    margin-left: 10px;
+    margin-top: 30px;
+    padding: 10px;
+    background: black;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.credits{
+    color: white;
+    margin-top: 20px;
+    text-shadow: 0px 0px 1px black;
+}
+
+.credits a{
+
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.credits a span{
+    color: black;
+}
+
+.copyright span{
+    color: black;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.arrow{
+    position: fixed;
+    height: 50px;
+    bottom: 40px;
+    right: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.btn-outline-dark {
+        color: #000;
+        border-color: #000;
+    }
+
+    .btn-dark {
+        background-color: #000;
+        border-color: #000;
+    }
+    .gallery-img {
+        transition: transform 0.3s;
+    }
+
+    .gallery-img:hover {
+        transform: scale(1.1);
+    }
+</style>
+</head>
+<body>
+    <div class="all-content">
+        <nav class="navbar navbar-expand-lg" id="navbar">
+            <div class="container-fluid">
+              
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span><i class="fa-solid fa-bars" style="color:  white; font-size: 23px;"></i></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+      
+                  <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#destinations">Destinations</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#testimonials">Testimonials</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#blog">Blogs</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#gallary">Gallary</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="country.html">Countries</a>
+                  </li>
+                </ul>
+
+                <div class="d-flex">
+                    <button class="btn btn-outline-dark me-2" type="button" onclick="location.href='login.html'">Login</button>
+                    <button class="btn btn-dark" type="button" onclick="location.href='registration.html'">Sign Up</button>
+                </div>
+
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+        </nav>
+    
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="content">
+            <h3>Explore the World<br>Through Education</h3>
+            <p>
+                Find the perfect study abroad program to expand your horizons and experience new cultures.
+            </p>
+            <button id="btn">Find Programs</button>
+        </div>
+    </section>
+    <!--home section end-->
+
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="heading">Why Choose <span>Study Abroad</span></div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <img src='h1-op.jpg' alt="Study Abroad">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h3>Experience Education in a New Light</h3>
+                    <p>Experience education illuminates learning through hands-on, immersive encounters, shifting away from traditional classroom settings to foster deeper understanding and practical skills. This approach embraces real-world scenarios, enabling learners to actively engage with concepts, experiment with ideas, and reflect on their experiences. By emphasizing active participation and application, experience education sparks curiosity, instills confidence, and cultivates a profound connection between theory and practice, ultimately shaping well-rounded individuals equipped for the complexities of the modern world.</p>
+                    <button id="about-btn">Learn More</button>
+                </div>
+            </div>           
+        </div>
+    </section>
+    <!--about section end--> 
+
+    <!-- Destinations Section -->
+<section id="destinations" class="section">
+    <div class="container">
+        <div class="heading3">STUDY ABROAD DESTINATION</div>
+    </div>
+            <!-- Destination 1 -->
+            <div class="col-md-4">
+                <div class="destination-card">
+                    <img src="Oxford.jpg" alt="Destination 1">
+                    <div class="destination-info">
+                        <h3>United Kingdom</h3>
+                        <h4>London</h4>
+                        <p>University of Oxford</p>
+                        <p>Experience academic excellence in the heart of historic Oxford.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Destination 2 -->
+            <div class="col-md-4">
+                <div class="destination-card">
+                    <img src="harvard-university-at-boston-massachusetts-th.jpg" alt="Destination 2">
+                    <div class="destination-info">
+                        <h3>United States</h3>
+                        <h4>Boston</h4>
+                        <p>Harvard University</p>
+                        <p>Immerse yourself in vibrant student life at one of the world's top universities.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Destination 3 -->
+            <div class="col-md-4">
+                <div class="destination-card">
+                    <img src="Sydney.png" alt="Destination 3">
+                    <div class="destination-info">
+                        <h3>Australia</h3>
+                        <h4>Sydney</h4>
+                        <p>University of Sydney</p>
+                        <p>Study in a dynamic city known for its innovation and multiculturalism.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonial_wrapper">
+        <div class="container">
+            
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="testimonials_subtitle">Clients Love Us</p>
+                    <h2 class="testimonials_title">Testimonials</h2>
+                </div>
+            </div>
+            <div class="row align-item-center mb-5">
+                <div class="col-sm-12 col-lg-4 mb-5 mb-lg-0">
+                    <img src='executive.avif' class="img-fluid">
+                </div>
+
+                <div class="col-sm-12 col-lg-7 offset-lg-1 mb-5 mb-lg-0">
+                     <div class="testimonials_card">
+                        <h3>Alison Amy</h3>
+                        <p class="testimonials_role">Student, Study Abroad Program</p>
+                        <p class="testimonials_text">Studying abroad was a transformative experience for me. It opened my eyes to new cultures, languages, and ways of thinking. I'm grateful for the opportunity to expand my horizons and grow both personally and academically.</p>
+                     </div>
+                </div>
+            </div>
+
+
+            <div class="row align-item-center flex-sm-row-reverse">
+                <div class="col-sm-12 col-lg-4 offset-lg-1 mb-5 mb-lg-0">
+                    <img src="marketingdirector.jpg" class="img-fluid">
+                </div>
+
+                <div class="col-sm-12 col-lg-7 mb-5 mb-lg-0">
+                     <div class="testimonials_card">
+                        <h3>Johny Roy</h3>
+                        <p class="testimonials_role">Student, Study Abroad Program</p>
+                        <p class="testimonials_text">My study abroad experience was nothing short of amazing. It allowed me to step out of my comfort zone, immerse myself in a new environment, and gain valuable insights that will stay with me for a lifetime. I highly recommend studying abroad to anyone seeking personal and academic growth.</p>
+                     </div>
+                </div>
+            </div>
+
+            <div class="row align-item-center mb-5">
+                <div class="col-sm-12 col-lg-4 mb-5 mb-lg-0">
+                    <img src='testimonial3.gif' class="img-fluid">
+                </div>
+
+                <div class="col-sm-12 col-lg-7 offset-lg-1 mb-5 mb-lg-0">
+                     <div class="testimonials_card">
+                        <h3>Max Alan</h3>
+                        <p class="testimonials_role">Student, Study Abroad Program</p>
+                        <p class="testimonials_text">My study abroad experience was nothing short of amazing. It allowed me to step out of my comfort zone, immerse myself in a new environment, and gain valuable insights that will stay with me for a lifetime. I highly recommend studying abroad to anyone seeking personal and academic growth.</p>
+                     </div>
+                </div>
+            </div>
+
+            <div class="row align-item-center flex-sm-row-reverse">
+                <div class="col-sm-12 col-lg-4 offset-lg-1 mb-5 mb-lg-0">
+                    <img src='testimonial4.png' class="img-fluid">
+                </div>
+
+                <div class="col-sm-12 col-lg-7 mb-5 mb-lg-0">
+                     <div class="testimonials_card">
+                        <h3>Peter Paul</h3>
+                        <p class="testimonials_role">Student, Study Abroad Program</p>
+                        <p class="testimonials_text">My study abroad experience was nothing short of amazing. It allowed me to step out of my comfort zone, immerse myself in a new environment, and gain valuable insights that will stay with me for a lifetime. I highly recommend studying abroad to anyone seeking personal and academic growth.</p>
+                     </div>
+                </div>
+            </div>
+
+            <div class="row align-item-center mb-5">
+                <div class="col-sm-12 col-lg-4 mb-5 mb-lg-0">
+                    <img src='testimonial6.png' class="img-fluid">
+                </div>
+
+                <div class="col-sm-12 col-lg-7 offset-lg-1 mb-5 mb-lg-0">
+                     <div class="testimonials_card">
+                        <h3>Sarah Olivia</h3>
+                        <p class="testimonials_role">Student, Study Abroad Program</p>
+                        <p class="testimonials_text">My study abroad experience was nothing short of amazing. It allowed me to step out of my comfort zone, immerse myself in a new environment, and gain valuable insights that will stay with me for a lifetime. I highly recommend studying abroad to anyone seeking personal and academic growth.</p>
+                     </div>
+                </div>
+            </div>
+
+            <div class="row align-item-center flex-sm-row-reverse">
+                <div class="col-sm-12 col-lg-4 offset-lg-1 mb-5 mb-lg-0">
+                    <img src='testimonial5.jpg' class="img-fluid">
+                </div>
+
+                <div class="col-sm-12 col-lg-7 mb-5 mb-lg-0">
+                     <div class="testimonials_card">
+                        <h3>Oliver Tesla</h3>
+                        <p class="testimonials_role">Student, Study Abroad Program</p>
+                        <p class="testimonials_text">My study abroad experience was nothing short of amazing. It allowed me to step out of my comfort zone, immerse myself in a new environment, and gain valuable insights that will stay with me for a lifetime. I highly recommend studying abroad to anyone seeking personal and academic growth.</p>
+                     </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    
+
+<!--gallary start-->
+<div class="container" id="gallary">
+    <div class="heading5">Our <span>Gallary</span></div>
+
+    <div class="row" style="margin-top: 30px;">
+        <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+                <img class="gallery-img" src='UK.webp' alt="">
+            </div>
+        </div>
+
+        <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+                <img class="gallery-img" src='German.jpg' alt="">
+            </div>
+        </div>
+
+        <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+                <img class="gallery-img" src='Berlin.jpg' alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="margin-top: 30px;">
+        <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+                <img class="gallery-img" src='Lingoda.jpg' alt="">
+            </div>
+        </div>
+
+        <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+                <img class="gallery-img" src='Quest-University.jpg' alt="">
+            </div>
+        </div>
+
+        <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+                <img class="gallery-img" src='FNUniv.jpg' alt="">
+            </div>
+        </div>
+
+    </div>
+</div>
+<!--gallary end-->
+
+<!--contact start-->
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-7">
+            <div class="heading6">Contact <span>Us</span></div>
+            <P>Interested in using our space for your gatherings or events? <br>Reach out to us for event bookings and custom coffee catering options.</P>
+            <input type="text" class="form-control" placeholder="Name" aria-label="default input example"><br>
+            <input type="email" class="form-control" placeholder="Email" aria-label="default input example"><br>
+            <input type="number" class="form-control" placeholder="Phone" aria-label="default input example"><br>
+            <button class="contact-btn">Send message</button>
+          </div>
+
+          <div class="col-md-5" id="col">
+            <h1>Info</h1>
+            <p><i class="fa-regular fa-envelope"> Example@gmail.com</i></p>
+            <p><i class="fa-solid fa-phone"> +008234567</i></p>
+            <p><i class="fa-solid fa-building-columns">Roshni Ema Nowshin</i></p>
+            <p>Ready to broaden your academic horizons? Get in touch with us today to explore our diverse range of study abroad programs and begin your journey towards a global education filled with endless possibilities!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!--contact end-->
+
+
+<!--blog start-->
+    <section id="blog">
+      <div class="heading7">Latest <span>Blogs</span></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+              <img src='' alt="">
+              <div class="card-body">
+                <h3>Global Perspectives: Tales from Abroad</h3>
+                <h5>Admin / 25 March 2024</h5>
+                <p>Stay updated with our latest blog posts, packed with invaluable insights and tips to enhance your study abroad experience.</p>
+                <button id="blog-btn">Read More</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+              <img src='' alt="">
+              <div class="card-body">
+                <h3>Global Horizons: Navigating the Study Abroad Journey</h3>
+                <h5>Admin / 25 March 2024</h5>
+                <p>Explore our blog for the freshest updates, advice, and inspiration to fuel your study abroad aspirations. Dive into a world of knowledge and opportunity!</p>
+                <button id="blog-btn">Read More</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+              <img src='' alt="">
+              <div class="card-body">
+                <h3>Study Abroad Adventures: Your Guide</h3>
+                <h5>Admin / 25 March 2024</h5>
+                <p>Discover the latest stories, advice, and experiences on our blog, tailored to support and guide you through your study abroad journey. Join us in shaping unforgettable educational adventures!</p>
+                <button id="blog-btn">Read More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+<!--blog end-->
+
+<!--footer start-->
+    <footer id="footer">
+      <div class="footer-logo text-center"><img src="" alt=""></div>
+      <div class="social-links text-center">
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-pinterest-p"></i>
+      </div>
+
+      <div class="credits text-center">
+        Designed By <a href="#"> <span>Ema Roshni Nowshin</span></a>
+      </div>
+      <div class="copyright text-center">
+        &copy; Copyright <strong> <span>Study Abroad</span></strong>. All Rights reserved
+      </div>
+    </footer>
+<!--footer end-->
+
+<a href="#" class="arrow"><i><img src="" alt="" height="100" width="100"></i></a>
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>
